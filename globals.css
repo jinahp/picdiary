@@ -4,23 +4,21 @@
   --gray-lightdark: #dedede;
   --gray-light: #f0f0f0;
   --white: #ffffff;
+  --red: #ed0d0d;
   --blue: #62bdb2cc;
   --blue-light: #8ddbd2cc;
+  --green: #1f915dcc;
+  --green-transparent: #58c0918a;
   --pink-transparent: #da9a9aa0;
   --pink-light: #d69393;
   --white-transparent: #ffffffa0;
   --white-more-transparent: #ffffff3c;
   --yellow-gradient: linear-gradient(128deg, #ff7e7e3d, #fbecb052);
-  --green-gradient: linear-gradient(90deg, #8caf9865, #dadab4);
-  --pink-gradient: repeating-linear-gradient(
-    45deg,
-    #ffe0e065,
-    #f5d9da,
-    #e2e5d3,
-    #c6fffe
-  );
+  --green-gradient: linear-gradient(90deg, #91edb165, rgb(222, 207, 132));
+  --pink-gradient: linear-gradient(45deg, #ffe0e065, #f5d9da, #e2e5d3, #c6fffe);
   --box-shadow: 0 1px 4px rgba(147, 147, 147, 0.196);
   --box-shadow-light: 0 1px 5px 1px rgba(255, 255, 255, 0.388);
+  --box-shadow-dark: 0 1px 10px 2px rgba(97, 191, 210, 0.388);
 }
 
 * {
@@ -54,4 +52,10 @@ body,
 input,
 a {
   all: unset;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
 }

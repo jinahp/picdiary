@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import "../globals.css";
-
 import { ReactNode } from "react";
+import "../globals.css";
+import { NextAuthProvider } from "./NextAuthProvider";
+import Provider from "./Provider";
 
 export const metadata: Metadata = {
   title: "Picdiary",
@@ -12,8 +13,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="ko">
-      <body>{children}</body>
-    </html>
+    <Provider>
+      <NextAuthProvider>
+        <html lang="ko">
+          <body>{children}</body>
+        </html>
+      </NextAuthProvider>
+    </Provider>
   );
 }
