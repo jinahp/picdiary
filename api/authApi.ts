@@ -9,7 +9,7 @@ export const login = (data: Auth) =>
   });
 
 export const signUp = (data: Auth) =>
-  axios.post("/auth/signup").then((res) => {
+  axios.post("/auth/signup", data).then((res) => {
     console.debug(res);
     return res.data;
   });
