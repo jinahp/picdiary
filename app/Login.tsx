@@ -76,7 +76,8 @@ export default function Login() {
               },
               pattern: {
                 value: passwordPattern,
-                message: "영문 대소문자와 숫자만 허용됩니다.",
+                message:
+                  "영문 대소문자와 숫자, 특수문자 '!, @, ^, &, *'만 허용됩니다.",
               },
               validate: {
                 validCharacters: (value) =>
