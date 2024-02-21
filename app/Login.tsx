@@ -101,9 +101,9 @@ export default function Login() {
             className={`${styles.button} ${styles["login-btn"]}`}
           />
 
-          <div className={styles["login-error"]}>
-            {isError && error.message}
-          </div>
+          {isError && (
+            <div className={styles["login-error"]}>{error.message}</div>
+          )}
         </form>
       </div>
 
