@@ -1,5 +1,6 @@
 :root {
   --black: #000000;
+  --gray: #525252;
   --gray-dark: #b4b4b4;
   --gray-lightdark: #dedede;
   --gray-light: #f0f0f0;
@@ -8,6 +9,7 @@
   --blue: #62bdb2cc;
   --blue-light: #8ddbd2cc;
   --green: #1f915dcc;
+  --green-light: #72cea5a4;
   --green-transparent: #58c0918a;
   --pink-transparent: #da9a9aa0;
   --pink-light: #d69393;

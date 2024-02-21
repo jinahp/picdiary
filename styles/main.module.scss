@@ -72,3 +72,32 @@
     }
   }
 }
+
+.main-btn {
+  background-color: var(--green-light);
+  color: var(--white);
+  letter-spacing: -1px;
+
+  &:hover {
+    background: var(--green-gradient);
+    &::after {
+      content: "다이어리 잠금을 해제할까요?";
+    }
+  }
+
+  &::after {
+    content: "다이어리가 잠겨있습니다.";
+    transition: content 0.2s ease;
+    color: var(--black);
+    font-size: 0.9rem;
+    position: relative;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: 769px) {
+    font-size: 1rem;
+  }
+}

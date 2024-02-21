@@ -1,12 +1,29 @@
 "use client";
 
-import { useSession } from "next-auth/react";
+import styles from "@/styles/main.module.scss";
+import Link from "next/link";
+import Button from "./Button";
 import Login from "./Login";
+import useSession from "./hooks/useSession";
+import useMounted from "./hooks/useMounted";
 
 export default function LoginCheck({ Component }: any) {
-  const { data: session, status, update } = useSession();
-  if (status === "unauthenticated") {
-    return <Login />;
-  }
-  return status;
+  const [token] = useSession("token");
+  const mounted = useMounted();
+  return (
+    mounted && (
+      <>
+        {token ? (
+          <Link href="/diary">
+            <Button
+              text={"🔒"}
+              className={`${styles.button} ${styles["main-btn"]}`}
+            />
+          </Link>
+        ) : (
+          <Login />
+        )}
+      </>
+    )
+  );
 }

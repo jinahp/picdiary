@@ -8,16 +8,8 @@
   font-weight: bold;
   transition: background-color 0.2s;
 
-  &.disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-    &:hover {
-      background-color: #ccc;
-    }
-  }
-
   @media (min-width: 769px) {
     padding: 15px 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }

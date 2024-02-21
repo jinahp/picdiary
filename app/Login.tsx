@@ -1,10 +1,11 @@
+"use client";
+
 import styles from "@/styles/login.module.scss";
 import Link from "next/link";
 import Button from "./Button";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { login } from "@/api/authApi";
-import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 const passwordPattern = /^[A-Za-z0-9!@^&*]+$/;
@@ -12,7 +13,6 @@ const passwordPattern = /^[A-Za-z0-9!@^&*]+$/;
 export default function Login() {
   const { error, isError, mutate } = useMutation({ mutationFn: login });
   const router = useRouter();
-  const { data: session, status, update } = useSession();
 
   const {
     register,
@@ -27,7 +27,7 @@ export default function Login() {
       },
       onSuccess: async (data) => {
         console.log("data:", data);
-        await update(data.token);
+        sessionStorage.setItem("token", data.token);
         router.push("/diary");
       },
     });
@@ -62,6 +62,7 @@ export default function Login() {
 
           <input
             type="password"
+            autoComplete="off"
             className={styles["login-input"]}
             placeholder="비밀번호를 입력해주세요."
             {...register("password", {
