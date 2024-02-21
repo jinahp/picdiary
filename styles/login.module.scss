@@ -6,13 +6,28 @@
   width: 100%;
   min-width: 250px;
   height: 400px;
+  max-height: 500px;
   padding: 0 30px;
   border-radius: 10px;
   background-color: var(--white-more-transparent);
   box-shadow: var(--box-shadow);
-  gap: 20px;
 
-  input {
+  @media (min-width: 769px) {
+    width: 900px;
+    max-width: 800px;
+  }
+}
+
+.login-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 95%;
+  border-radius: 10px;
+  gap: 3px;
+
+  .login-input {
     width: 100%;
     height: 40px;
     padding: 3px 10px;
@@ -28,28 +43,48 @@
     min-width: 500px;
     border-radius: 10px;
 
-    input {
-      width: 80%;
-      height: 40px;
+    .login-input {
       padding: 10px 20px;
       font-size: 1rem;
-      letter-spacing: -1px;
-      border-radius: 5px;
     }
   }
 }
 
-.sign-up-link-box {
+.login-password-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.find-password {
+  font-size: 0.8rem;
+  text-align: right;
+  color: var(--black);
+  border-bottom: 1px solid var(--White);
+  width: fit-content;
+  letter-spacing: -1px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--gray-dark);
+  }
+}
+
+.login-link-box {
   display: flex;
   align-items: center;
   height: 30px;
   gap: 3px;
+  margin-top: 10px;
 }
 
-.sign-up-link-text {
+.login-link-text {
   font-size: 0.9rem;
   letter-spacing: -1px;
   color: var(--black);
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
   border: none;
@@ -62,17 +97,37 @@
 }
 
 @media (max-width: 768px) {
-  .sign-up-link-text::after {
+  .login-link-text::after {
     content: "회원가입 하러 가기";
   }
 }
 
 @media (min-width: 769px) {
-  .sign-up-link-text::after {
+  .login-link-text::after {
     content: "여기서 다이어리에 가입하고 소중한 순간을 기록해보세요.";
   }
 }
 
-.sign-up-link-heart::after {
+.login-link-heart::after {
   content: "🤍";
+}
+
+.login-error {
+  display: flex;
+  color: var(--black);
+  font-size: 0.9rem;
+  margin: 10px;
+
+  @media (min-width: 769px) {
+    font-size: 1rem;
+  }
+}
+
+.login-btn {
+  background-color: var(--blue);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--blue-light);
+  }
 }
