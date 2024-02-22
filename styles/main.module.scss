@@ -81,12 +81,12 @@
   &:hover {
     background: var(--green-gradient);
     &::after {
-      content: "다이어리 잠금을 해제할까요?";
+      content: "잠금을 해제하고 달력으로 이동합니다.";
     }
   }
 
   &::after {
-    content: "다이어리가 잠겨있습니다.";
+    content: "잠금 상태입니다.";
     transition: content 0.2s ease;
     color: var(--black);
     font-size: 0.9rem;

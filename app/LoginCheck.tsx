@@ -14,7 +14,7 @@ export default function LoginCheck({ Component }: any) {
     mounted && (
       <>
         {token ? (
-          <Link href="/diary">
+          <Link href="/calendar">
             <Button
               text={"🔒"}
               className={`${styles.button} ${styles["main-btn"]}`}

@@ -28,7 +28,7 @@ export default function Login() {
       onSuccess: async (data) => {
         console.log("data:", data);
         sessionStorage.setItem("token", data.token);
-        router.push("/diary");
+        router.push("/calendar");
       },
     });
   };
