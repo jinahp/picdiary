@@ -17,7 +17,7 @@ interface SignUpProps {
   terms: boolean;
 }
 
-const passwordPattern = /^[A-Za-z0-9!@^&*]+$/;
+const passwordPattern = /^[A-Za-z0-9!@^&*#]+$/;
 
 export default function SignUp() {
   const { error, isError, mutate } = useMutation({ mutationFn: signUp });
@@ -89,7 +89,7 @@ export default function SignUp() {
             pattern: {
               value: passwordPattern,
               message:
-                "영문 대소문자와 숫자, 특수문자 '!, @, ^, &, *'만 허용됩니다.",
+                "영문 대소문자와 숫자, 특수문자 '!, @, ^, &, *, #'만 허용됩니다.",
             },
           })}
         />

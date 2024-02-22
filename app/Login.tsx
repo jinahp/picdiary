@@ -8,7 +8,7 @@ import { useMutation } from "@tanstack/react-query";
 import { login } from "@/api/authApi";
 import { useRouter } from "next/navigation";
 
-const passwordPattern = /^[A-Za-z0-9!@^&*]+$/;
+const passwordPattern = /^[A-Za-z0-9!@^&*#]+$/;
 
 export default function Login() {
   const { error, isError, mutate } = useMutation({ mutationFn: login });
@@ -78,12 +78,12 @@ export default function Login() {
               pattern: {
                 value: passwordPattern,
                 message:
-                  "영문 대소문자와 숫자, 특수문자 '!, @, ^, &, *'만 허용됩니다.",
+                  "영문 대소문자와 숫자, 특수문자 '!, @, ^, &, *, #'만 허용됩니다.",
               },
               validate: {
                 validCharacters: (value) =>
                   passwordPattern.test(value) ||
-                  "비밀번호는 영문 대소문자, 숫자, !, @, ^, &,*만 허용됩니다.",
+                  "비밀번호는 영문 대소문자, 숫자, !, @, ^, &, *, #만 허용됩니다.",
               },
             })}
           />
