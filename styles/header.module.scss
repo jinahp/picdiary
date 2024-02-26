@@ -1,0 +1,94 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 10px;
+  background: var(--yellow-transparent);
+
+  @media (min-width: 769px) {
+    padding: 10px 20px;
+  }
+}
+
+.logo {
+  width: 150px;
+
+  @media (min-width: 375px) {
+    width: 200px;
+  }
+
+  @media (min-width: 769px) {
+    width: 230px;
+  }
+
+  animation: logo-vertical 2s ease-in-out infinite;
+  @keyframes logo-vertical {
+    0% {
+      transform: translateY(0);
+    }
+    8.33% {
+      transform: translateY(6px);
+    }
+    16.65% {
+      transform: translateY(-5px);
+    }
+    24.98% {
+      transform: translateY(4px);
+    }
+    33.3% {
+      transform: translateY(-2px);
+    }
+    41.63% {
+      transform: translateY(1px);
+    }
+    49.95% {
+      transform: translateY(0);
+    }
+    58.28% {
+      transform: translateY(0);
+    }
+    66.6% {
+      transform: translateY(0);
+    }
+    74.93% {
+      transform: translateY(0);
+    }
+    83.25% {
+      transform: translateY(0);
+    }
+    91.58% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+.logout-button {
+  padding: 10px 20px;
+  box-shadow: var(--box-shadow);
+  background: var(--yellow-gradient);
+  color: var(--gray);
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: -1px;
+
+  &:hover {
+    transition: all 0.2s ease;
+    box-shadow: var(--box-shadow);
+    color: var(--gray-dark);
+  }
+
+  @media (min-width: 375px) {
+    padding: 10px 20px;
+    font-size: 0.8em;
+  }
+
+  @media (min-width: 769px) {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+}
