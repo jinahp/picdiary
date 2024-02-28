@@ -24,6 +24,7 @@
   --green-gradient: linear-gradient(90deg, #91edb165, rgb(222, 207, 132));
   --pink-gradient: linear-gradient(45deg, #ffe0e065, #f5d9da, #e2e5d3, #c6fffe);
   --yellow-gradient: linear-gradient(0deg, #ffefa0cc, #ffffeecc);
+  --yellow-deep-gradient: linear-gradient(90deg, #ffefa0cc, #e8ffddfb);
   --box-shadow: 0 1px 4px rgba(147, 147, 147, 0.196);
   --box-shadow-light: 0 1px 5px 1px rgba(255, 255, 255, 0.388);
   --box-shadow-dark: 0 1px 10px 2px rgba(97, 191, 210, 0.388);

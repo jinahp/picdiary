@@ -72,7 +72,7 @@ export default function Login() {
                 message: "비밀번호는 최소 8자 이상이어야 합니다.",
               },
               maxLength: {
-                value: 10,
+                value: 13,
                 message: "비밀번호는 최대 10자여야 합니다.",
               },
               pattern: {

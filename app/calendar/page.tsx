@@ -9,14 +9,15 @@ import CalendarCells from "@/containers/calendar/CalendarCells";
 import CalendarDays from "@/containers/calendar/CalendarDays";
 
 interface CalendarProps {
-  value: Date;
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default function Calendar({ value }: CalendarProps) {
-  const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
-  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+export default function Calendar(props: CalendarProps) {
+  const date = new Date();
+  const [currentMonth, setCurrentMonth] = useState<Date>(date);
+  const [selectedDate, setSelectedDate] = useState<Date>(date);
   const [nowDate, setNowDate] = useState<string>(
-    moment(value).format("YYYY년 M월 DD일")
+    moment(date).format("YYYY년 M월 DD일")
   );
   const [isClose, setIsClose] = useState<boolean>(false);
 
