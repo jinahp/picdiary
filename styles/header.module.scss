@@ -70,7 +70,7 @@
   padding: 10px 20px;
   box-shadow: var(--box-shadow);
   background: var(--yellow-gradient);
-  color: var(--gray);
+  color: var(--gray-dark);
   font-size: 0.7em;
   font-weight: bold;
   letter-spacing: -1px;
@@ -78,7 +78,7 @@
   &:hover {
     transition: all 0.2s ease;
     box-shadow: var(--box-shadow);
-    color: var(--gray-dark);
+    color: var(--blue);
   }
 
   @media (min-width: 375px) {

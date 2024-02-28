@@ -1,0 +1,33 @@
+.days {
+  padding: 4.5px;
+  background-color: var(--blue);
+
+  @media (min-width: 769px) {
+    padding: 20px 56px;
+  }
+}
+
+.days-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 769px) {
+    width: 100%;
+  }
+}
+
+.days-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--white);
+  width: 100%;
+
+  @media (min-width: 769px) {
+    font-size: 1.2em;
+    width: 100%;
+  }
+}

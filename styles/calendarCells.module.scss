@@ -1,0 +1,66 @@
+.cells-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  box-shadow: var(--gray) 0px 0px 1px 0px;
+
+  @media (min-width: 769px) {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+  }
+}
+
+.cell {
+  display: flex;
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  font-size: 0.7em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--green-transparent);
+  }
+
+  @media (min-width: 769px) {
+    justify-content: center;
+    background-color: var(--gray-dark);
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 1em;
+  }
+}
+
+.cells-number {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--blue);
+
+  @media (min-width: 769px) {
+    color: var(--white);
+  }
+}
+
+.cells-row {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 769px) {
+  }
+}
+
+.days {
+  padding: 6px;
+  background-color: var(--green-transparent);
+  @media (min-width: 769px) {
+    padding: 10px;
+  }
+}
