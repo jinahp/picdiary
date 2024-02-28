@@ -18,3 +18,15 @@ interface Todo {
   toDoId: string;
   isCompleted: boolean;
 }
+
+interface CalendarHeaderProps {
+  currentMonth: Date;
+  prevMonth: () => void;
+  nextMonth: () => void;
+}
+
+interface CalendarCellsProps {
+  currentMonth: Date;
+  selectedDate: Date;
+  onDateClick: (date: Date) => void;
+}
