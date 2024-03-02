@@ -68,7 +68,7 @@ export default function Header() {
         >
           <DialogContent>
             <DialogContentText className={styles["dialog-description"]}>
-              다이어리 작성을 마치셨나요? 정말 화면을 종료하시겠어요?🥺
+              다이어리 작성을 마치셨나요? 로그아웃하시겠습니까?
             </DialogContentText>
           </DialogContent>
           <DialogActions className={styles["dialog-actions"]}>
