@@ -40,3 +40,27 @@
     font-size: 1.5em;
   }
 }
+
+.prev-month {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateX(-5px);
+  }
+
+  &:active {
+    transform: translateX(5px);
+  }
+}
+
+.next-month {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateX(5px);
+  }
+
+  &:active {
+    transform: translateX(-5px);
+  }
+}

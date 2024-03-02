@@ -11,7 +11,7 @@ export default function CalendarHeader({
     <div className={styles["pic-calendar-wrapper"]}>
       <Icon
         icon="akar-icons:arrow-left"
-        className={`styles["prev-month"] ${styles.icon}`}
+        className={`${styles["prev-month"]} ${styles.icon}`}
         onClick={prevMonth}
       />
       <div className={styles["pic-calendar-header"]}>
@@ -21,7 +21,7 @@ export default function CalendarHeader({
       </div>
       <Icon
         icon="akar-icons:arrow-right"
-        className={`styles["next-month"] ${styles.icon}`}
+        className={`${styles["next-month"]} ${styles.icon}`}
         onClick={nextMonth}
       />
     </div>
