@@ -53,6 +53,9 @@ body {
   letter-spacing: -1px;
   line-height: normal;
   word-break: keep-all;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 html {
