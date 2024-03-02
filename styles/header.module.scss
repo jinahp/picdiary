@@ -124,7 +124,7 @@ p.dialog-description {
   }
 }
 
-.header-modal-btn {
+button.header-modal-btn {
   border: none;
   box-shadow: var(--box-shadow);
   background-color: var(--pink-light);
@@ -146,12 +146,12 @@ p.dialog-description {
 
   @media (min-width: 769px) {
     padding: 10px 20px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: bold;
   }
 }
 
-.header-modal-btn-back {
+button.header-modal-btn-back {
   border: none;
   box-shadow: var(--box-shadow);
   background: var(--pink-transparent);
@@ -173,6 +173,6 @@ p.dialog-description {
 
   @media (min-width: 769px) {
     padding: 10px 20px;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 }
