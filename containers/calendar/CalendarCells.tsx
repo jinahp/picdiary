@@ -1,16 +1,13 @@
+import styles from "@/styles/calendarCells.module.scss";
 import {
   addDays,
   endOfMonth,
   endOfWeek,
   format,
-  isSameDay,
   isSameMonth,
   startOfMonth,
   startOfWeek,
-  subDays,
 } from "date-fns";
-import styles from "@/styles/calendarCells.module.scss";
-
 export default function CalendarCells({
   currentMonth,
   selectedDate,
@@ -18,27 +15,23 @@ export default function CalendarCells({
 }: CalendarCellsProps) {
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(monthStart);
-  const startDate = subDays(startOfWeek(monthStart), -1);
+  const startDate = startOfWeek(monthStart);
   const endDate = endOfWeek(monthEnd);
 
   const rows = [];
   let days = [];
   let day = startDate;
-  let formattedDate = "";
 
   while (day <= endDate) {
     for (let i = 0; i < 7; i++) {
-      formattedDate = format(day, "d");
+      const formattedDate = format(day, "d");
       const cloneDay = day;
+      const isCurrentMonth = isSameMonth(day, currentMonth);
       days.push(
-        <div className={styles["cells-wrapper"]} key={day.toString()}>
+        <div className={styles["cell-wrapper"]} key={day.toString()}>
           <div
-            className={`${styles.cell} ${
-              !isSameMonth(day, monthStart)
-                ? styles.disabled
-                : isSameDay(day, selectedDate)
-                ? styles.selected
-                : ""
+            className={`${styles.cell} ${styles["cell-hover"]} ${
+              !isCurrentMonth ? styles["not-current-month"] : ""
             }`}
             key={day.toString()}
             onClick={() => onDateClick(cloneDay)}

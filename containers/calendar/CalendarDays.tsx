@@ -2,7 +2,7 @@ import styles from "@/styles/calendarDays.module.scss";
 
 export default function CalendarDays() {
   const days = [];
-  const date = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+  const date = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
   for (let i = 0; i < 7; i++) {
     days.push(

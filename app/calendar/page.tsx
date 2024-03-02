@@ -49,7 +49,7 @@ export default function Calendar(props: CalendarProps) {
           className={styles["page-selected-date-box"]}
           onClick={handleToggleCalendar}
         >
-          ♥ 오늘은 {nowDate} ♥
+          오늘은 {nowDate}
         </div>
         {!isClose && (
           <div className={styles.calendar}>
