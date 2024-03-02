@@ -9,6 +9,7 @@
   --red-light: #d43333c1;
   --orange: #e39a5acc;
   --orange-transparent: #ffb4737a;
+  --orange-deep-gradient: linear-gradient(90deg, #ffe9a0cc, #e8ffddfb);
   --yellow: #ffefa0cc;
   --yellow-transparent: #ffffeecc;
   --blue: #62bdb2cc;

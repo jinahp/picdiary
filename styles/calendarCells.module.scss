@@ -9,31 +9,49 @@
 .cell {
   display: flex;
   justify-content: center;
-  margin: 5px;
-  width: 2.5em;
+  margin: 3px;
+  width: 2.8em;
   height: 3em;
   font-size: 0.7em;
   border: solid 0.5px var(--gray-light);
   color: var(--blue);
 
-  &:hover,
-  &:active,
-  &:focus {
+  &:hover {
     cursor: pointer;
-    background-color: var(--green-transparent);
+    background: var(--orange-deep-gradient);
   }
 
   @media (min-width: 375px) {
+    width: 3.4em;
+    height: 4em;
+    margin: 3px;
+    padding: 5px;
+    font-size: 0.7em;
   }
 
   @media (min-width: 769px) {
-    width: 8em;
+    justify-content: left;
+    width: 6.1em;
+    height: 5em;
+    font-size: 1em;
+    margin: 6px;
+    padding: 5px 15px;
+    font-size: 0.9em;
+  }
+
+  @media (min-width: 1024px) {
+    width: 7.5em;
     height: 5em;
     font-size: 1em;
     margin: 3px;
-    padding: 5px;
-    color: var(--blue);
+    padding: 10px 15px;
     font-size: 1em;
+  }
+}
+
+.clicked {
+  &:active {
+    background-color: var(--orange-transparent);
   }
 }
 
@@ -61,6 +79,10 @@
   }
 
   @media (min-width: 769px) {
-    width: 600px;
+    width: 500px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 900px;
   }
 }

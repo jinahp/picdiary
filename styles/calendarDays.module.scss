@@ -1,19 +1,36 @@
-.days {
-  padding: 4.5px;
-  background-color: var(--blue);
-
-  @media (min-width: 769px) {
-    padding: 20px 56px;
-  }
-}
-
 .days-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
 
   @media (min-width: 769px) {
     width: 100%;
+  }
+}
+
+.days {
+  text-align: center;
+  padding: 5px;
+  color: var(--orange);
+  border: solid 0.5px var(--gray-light);
+  border-radius: 10px;
+  font-size: 0.7em;
+  width: 4em;
+
+  @media (min-width: 375px) {
+    width: 3em;
+    padding: 2px;
+  }
+
+  @media (min-width: 769px) {
+    width: 5.3em;
+    padding: 5px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 7.2em;
+    padding: 5px;
   }
 }
 
@@ -23,11 +40,20 @@
   align-items: center;
   font-size: 0.8em;
   font-weight: bold;
-  color: var(--white);
-  width: 100%;
+  gap: 1.5px;
+
+  @media (min-width: 375px) {
+    font-size: 1.1em;
+    gap: 7px;
+  }
 
   @media (min-width: 769px) {
-    font-size: 1.2em;
-    width: 100%;
+    font-size: 1.5em;
+    gap: 10px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.5em;
+    gap: 8px;
   }
 }

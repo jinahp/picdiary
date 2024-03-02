@@ -21,7 +21,11 @@
   margin: 10px 0;
 
   .year {
-    font-size: 1em;
+    font-size: 0.9em;
+
+    @media (min-width: 769px) {
+      font-size: 1.1em;
+    }
   }
 }
 

@@ -1,3 +1,4 @@
+"use client";
 import styles from "@/styles/calendarCells.module.scss";
 import {
   addDays,
@@ -8,6 +9,7 @@ import {
   startOfMonth,
   startOfWeek,
 } from "date-fns";
+import { useState } from "react";
 export default function CalendarCells({
   currentMonth,
   selectedDate,
@@ -17,6 +19,7 @@ export default function CalendarCells({
   const monthEnd = endOfMonth(monthStart);
   const startDate = startOfWeek(monthStart);
   const endDate = endOfWeek(monthEnd);
+  const [clickedDate, setClickedDate] = useState<Date>();
 
   const rows = [];
   let days = [];
@@ -32,9 +35,13 @@ export default function CalendarCells({
           <div
             className={`${styles.cell} ${styles["cell-hover"]} ${
               !isCurrentMonth ? styles["not-current-month"] : ""
-            }`}
+            }
+            ${clickedDate === day ? styles["clicked"] : ""}`}
             key={day.toString()}
-            onClick={() => onDateClick(cloneDay)}
+            onClick={() => {
+              onDateClick(cloneDay);
+              setClickedDate(cloneDay);
+            }}
           >
             <span className={styles["cells-number"]}>{formattedDate}</span>
           </div>

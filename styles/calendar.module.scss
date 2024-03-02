@@ -45,8 +45,17 @@
   padding: 0 10px 25px;
   background: var(--white);
   box-shadow: var(--box-shadow);
+  width: 270px;
+
+  @media (min-width: 375px) {
+    width: 90%;
+  }
 
   @media (min-width: 769px) {
     width: 90%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 950px;
   }
 }
