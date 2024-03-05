@@ -1,17 +1,19 @@
 import styles from "@/styles/button.module.scss";
 
 interface ButtonProps {
-  text: string;
+  children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
+  text?: string;
 }
 
 export default function Button({
-  text,
+  children,
   className,
   disabled,
   onClick,
+  text,
 }: ButtonProps) {
   return (
     <button
@@ -19,7 +21,7 @@ export default function Button({
       disabled={disabled}
       onClick={onClick}
     >
-      {text}
+      {children ?? text}
     </button>
   );
 }

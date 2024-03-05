@@ -7,6 +7,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { login } from "@/api/authApi";
 import { useRouter } from "next/navigation";
+import GoogleLoginPage from "./GoogleLoginPage";
 
 const passwordPattern = /^[A-Za-z0-9!@^&*#]+$/;
 
@@ -107,6 +108,8 @@ export default function Login() {
             <div className={styles["login-error"]}>{error.message}</div>
           )}
         </form>
+        <hr className={styles["login-hr"]} />
+        <GoogleLoginPage />
       </div>
 
       <Link href={"/sign-up"}>

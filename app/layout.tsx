@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 import "../globals.css";
 import Provider from "./Provider";
+import AuthContext from "@/context/AuthContext";
 
 export const metadata: Metadata = {
   title: "Picdiary",
@@ -13,9 +14,11 @@ export default function RootLayout({
 }: Readonly<{ children: ReactNode }>) {
   return (
     <Provider>
-      <html lang="ko">
-        <body>{children}</body>
-      </html>
+      <AuthContext>
+        <html lang="ko">
+          <body>{children}</body>
+        </html>
+      </AuthContext>
     </Provider>
   );
 }

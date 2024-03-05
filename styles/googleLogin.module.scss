@@ -1,0 +1,26 @@
+button.google-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  margin: 20px 0 0;
+  padding: 10px 15px;
+  background-color: var(--gray-light);
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  color: var(--gray);
+  font-size: 0.8em;
+  letter-spacing: -1px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--gray);
+    background-color: var(--white);
+  }
+
+  @media (min-width: 769px) {
+    padding: 10px 30px;
+    font-size: 0.9em;
+  }
+}
