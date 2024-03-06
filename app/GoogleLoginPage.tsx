@@ -7,7 +7,7 @@ export default function GoogleLoginPage() {
   return (
     <Button
       className={styles["google-button"]}
-      onClick={() => signIn("google", { callbackUrl: "/calendar" })}
+      onClick={() => signIn()}
       disabled={false}
     >
       <GoogleImage alt="Google" />
