@@ -12,13 +12,14 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
-  DialogTitle,
   Slide,
 } from "@mui/material";
 import { useRouter } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
 
 export default function Header() {
   const router = useRouter();
+  const { status, data: session } = useSession();
   const [token, setToken] = useSessionStorage("token");
   const [open, setOpen] = useState<boolean>(false);
 
@@ -39,9 +40,12 @@ export default function Header() {
     setOpen(false);
   };
 
-  const handleExit = () => {
+  const handleExit = async () => {
+    console.log("Logging out...");
     setOpen(false);
-    if (!token) return;
+    if (!token) {
+      await signOut({ callbackUrl: "/", redirect: true });
+    }
     setToken("");
     router.push("/");
   };
@@ -51,11 +55,13 @@ export default function Header() {
       <Link href="/">
         <LogoSvg className={styles.logo} />
       </Link>
-      <Button
-        text={"로그아웃"}
-        className={styles["logout-button"]}
-        onClick={handleClickLogout}
-      />
+      {(token || status === "authenticated") && (
+        <Button
+          text={"로그아웃"}
+          className={styles["logout-button"]}
+          onClick={handleClickLogout}
+        />
+      )}
       {open && (
         <Dialog
           open={open}

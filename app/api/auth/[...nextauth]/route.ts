@@ -17,6 +17,11 @@ const handler = NextAuth({
   ],
 
   callbacks: {
+    async redirect({ url, baseUrl }) {
+      console.log("url:", url);
+      console.log("baseUrl:", baseUrl);
+      return url.startsWith(baseUrl) ? url : baseUrl + "/calendar";
+    },
     async signIn({
       account,
       profile,
