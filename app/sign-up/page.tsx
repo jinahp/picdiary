@@ -8,7 +8,7 @@ import Button from "../Button";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { signUp } from "@/api/authApi";
-import useSession from "../hooks/useSession";
+import useSessionStorage from "../hooks/useSessionStorage";
 
 interface SignUpProps {
   email: string;
@@ -22,7 +22,7 @@ const passwordPattern = /^[A-Za-z0-9!@^&*#]+$/;
 export default function SignUp() {
   const { error, isError, mutate } = useMutation({ mutationFn: signUp });
   const router = useRouter();
-  const [token, setToken] = useSession("token");
+  const [token, setToken] = useSessionStorage("token");
 
   const {
     register,

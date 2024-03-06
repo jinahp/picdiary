@@ -1,6 +1,6 @@
 "use client";
 
-export default function useSession(
+export default function useSessionStorage(
   key: string
 ): [string | null, (session: string) => void] {
   const isServer = typeof window === "undefined";

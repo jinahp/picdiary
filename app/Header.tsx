@@ -4,7 +4,7 @@ import styles from "@/styles/header.module.scss";
 import LogoSvg from "@/public/svg/logo.svg";
 import Link from "next/link";
 import Button from "./Button";
-import useSession from "./hooks/useSession";
+import useSessionStorage from "./hooks/useSessionStorage";
 import { forwardRef, useState } from "react";
 import { TransitionProps } from "@mui/material/transitions";
 import {
@@ -19,7 +19,7 @@ import { useRouter } from "next/navigation";
 
 export default function Header() {
   const router = useRouter();
-  const [token, setToken] = useSession("token");
+  const [token, setToken] = useSessionStorage("token");
   const [open, setOpen] = useState<boolean>(false);
 
   const Transition = forwardRef(function Transition(
