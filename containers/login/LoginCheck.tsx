@@ -3,10 +3,10 @@
 import styles from "@/styles/main.module.scss";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import Button from "./Button";
+import Button from "../button/Button";
 import Login from "./Login";
-import useMounted from "./hooks/useMounted";
-import useSessionStorage from "./hooks/useSessionStorage";
+import useMounted from "../../app/hooks/useMounted";
+import useSessionStorage from "../../app/hooks/useSessionStorage";
 
 export default function LoginCheck({ Component }: any) {
   const { status, data: session } = useSession();

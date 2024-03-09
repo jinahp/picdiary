@@ -1,6 +1,6 @@
 import GoogleImage from "@/public/svg/ic-google.svg";
 import styles from "@/styles/googleLogin.module.scss";
-import Button from "./Button";
+import Button from "../button/Button";
 import { signIn } from "next-auth/react";
 
 export default function GoogleLoginPage() {

@@ -1,6 +1,6 @@
 import LogoSvg from "@/public/svg/logo.svg";
 import styles from "@/styles/main.module.scss";
-import LoginCheck from "./LoginCheck";
+import LoginCheck from "../containers/login/LoginCheck";
 
 export default function Main() {
   return (

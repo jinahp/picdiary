@@ -4,7 +4,7 @@ import LogoSvg from "@/public/svg/logo.svg";
 import styles from "@/styles/signUp.module.scss";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
-import Button from "../Button";
+import Button from "../../containers/button/Button";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { signUp } from "@/api/authApi";

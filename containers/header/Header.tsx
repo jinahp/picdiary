@@ -3,8 +3,8 @@
 import styles from "@/styles/header.module.scss";
 import LogoSvg from "@/public/svg/logo.svg";
 import Link from "next/link";
-import Button from "./Button";
-import useSessionStorage from "./hooks/useSessionStorage";
+import Button from "../button/Button";
+import useSessionStorage from "../../app/hooks/useSessionStorage";
 import { forwardRef, useState } from "react";
 import { TransitionProps } from "@mui/material/transitions";
 import {

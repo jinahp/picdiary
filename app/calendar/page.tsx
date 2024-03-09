@@ -3,7 +3,7 @@
 import styles from "@/styles/calendar.module.scss";
 import moment from "moment";
 import { useState } from "react";
-import Header from "../Header";
+import Header from "../../containers/header/Header";
 import CalendarHeader from "@/containers/calendar/CalendarHeader";
 import CalendarCells from "@/containers/calendar/CalendarCells";
 import CalendarDays from "@/containers/calendar/CalendarDays";

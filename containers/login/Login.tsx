@@ -2,7 +2,7 @@
 
 import styles from "@/styles/login.module.scss";
 import Link from "next/link";
-import Button from "./Button";
+import Button from "../button/Button";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { login } from "@/api/authApi";
