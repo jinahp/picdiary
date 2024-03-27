@@ -4,12 +4,12 @@
   border: 1px solid var(--white);
   border-radius: 10px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   font-weight: bold;
   transition: background-color 0.2s;
 
   @media (min-width: 769px) {
     padding: 15px 20px;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }

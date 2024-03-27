@@ -20,24 +20,28 @@
   letter-spacing: -1px;
   margin: 10px 0;
 
+  @media (min-width: 769px) {
+    margin: 20px 0;
+  }
+
   .year {
-    font-size: 0.9em;
+    font-size: 1.3rem;
 
     @media (min-width: 769px) {
-      font-size: 1.1em;
+      font-size: 1.7rem;
     }
   }
 }
 
 .icon {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--blue);
   cursor: pointer;
   margin: 0 10px;
 
   @media (min-width: 769px) {
-    font-size: 1.5em;
+    font-size: 2rem;
   }
 }
 

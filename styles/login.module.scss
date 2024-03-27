@@ -34,7 +34,7 @@
     background-color: var(--white-transparent);
     border: 1px solid var(--gray-dark);
     border-radius: 5px;
-    font-size: 0.85rem;
+    font-size: 1.3rem;
     letter-spacing: -1px;
   }
 
@@ -45,7 +45,7 @@
 
     .login-input {
       padding: 10px 20px;
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
   }
 }
@@ -59,7 +59,7 @@
 }
 
 .find-password {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   text-align: right;
   color: var(--black);
   border-bottom: 1px solid var(--White);
@@ -89,7 +89,7 @@
 }
 
 .login-link-text {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   letter-spacing: -1px;
   color: var(--black);
   font-weight: bold;
@@ -123,11 +123,11 @@
 .login-error {
   display: flex;
   color: var(--black);
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   margin: 10px;
 
   @media (min-width: 769px) {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
