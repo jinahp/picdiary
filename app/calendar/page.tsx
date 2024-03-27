@@ -1,12 +1,13 @@
 "use client";
 
-import styles from "@/styles/calendar.module.scss";
-import moment from "moment";
-import { useState } from "react";
-import Header from "../../containers/header/Header";
-import CalendarHeader from "@/containers/calendar/CalendarHeader";
 import CalendarCells from "@/containers/calendar/CalendarCells";
 import CalendarDays from "@/containers/calendar/CalendarDays";
+import CalendarHeader from "@/containers/calendar/CalendarHeader";
+import styles from "@/styles/calendar.module.scss";
+import moment from "moment";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import Header from "../../containers/header/Header";
 
 interface CalendarProps {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -17,9 +18,10 @@ export default function Calendar(props: CalendarProps) {
   const [currentMonth, setCurrentMonth] = useState<Date>(date);
   const [selectedDate, setSelectedDate] = useState<Date>(date);
   const [nowDate, setNowDate] = useState<string>(
-    moment(date).format("YYYY년 M월 DD일")
+    moment(date).format("YYYY년 M월 DD일"),
   );
   const [isClose, setIsClose] = useState<boolean>(false);
+  const router = useRouter();
 
   const prevMonth = () => {
     setCurrentMonth((prev) => {
@@ -34,7 +36,8 @@ export default function Calendar(props: CalendarProps) {
   };
 
   const onDateClick = (date: Date) => {
-    setSelectedDate(date);
+    const formattedDate = moment(date).format("YYYYMMDD"); // 날짜 형식에 맞게 포맷 변경
+    router.push(`/diary/${formattedDate}`); // 클라이언트 측 라우팅으로 이동
   };
 
   const handleToggleCalendar = () => {

@@ -1,5 +1,3 @@
-"use client";
-
 import LogoSvg from "@/public/svg/logo.svg";
 import styles from "@/styles/signUp.module.scss";
 import Link from "next/link";
